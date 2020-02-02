@@ -6,14 +6,23 @@ import Person from './Person/Person';
 class App extends Component {
   state ={
     persons :[
-      {name :"max", age: 11},
-      {name: "Wellber", age:20},
-      {name: "Swazer", age:39}
-    ]
+      {name :"max", age: 9},
+      {name: "Wellber", age:8},
+      {name: "Swazer", age:7}
+    ],
+    otherState :'ini dari state lain'
   }
 
   switchNameHandler =()=>{
-    console.log('clicked!');
+    // dont do this
+    // this.state.persons[0].name='gedha';
+    this.setState({
+      persons :[
+        {name :"Gedha", age: 10},
+        {name: "Rizka", age:20},
+        {name: "Ramadhan", age:39}
+      ]
+    })
     
   }
 
