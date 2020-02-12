@@ -69,4 +69,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Step by step to Install
 npm install create-react-app -g
+
 create-react-app react-complete-guide --script-version 1.1.5
