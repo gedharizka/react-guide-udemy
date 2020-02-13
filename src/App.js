@@ -1,10 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import React,{Component} from 'react';
 import './App.css';
+import style from 'styled-components';
 import Person from './Person/Person';
-import Radium, {StyleRoot} from 'radium';
+import styled from 'styled-components';
+// import Radium, {StyleRoot} from 'radium';
 // import classes from '*.module.css';
 
+const StyleButton = styled.button`
+background-color:green;
+color:white;
+font:inherit;
+border:1px solid blue;
+padding: 8px;
+cursor:pointer;
+
+&:hover{
+  background-color:lightgreen;
+  color:black;
+}
+`;
 class App extends Component {
   state ={
     persons :[
@@ -92,19 +107,18 @@ class App extends Component {
       classes.push('bold');
     }
     return (
-      <StyleRoot>
+      // <StyleRoot>
       <div className="App">
         <h1>Hi i'm now learn react APp Understanding component</h1>
         <p className={classes.join(' ')}>Ini bekerja</p>
-        <button
-          style={style}
-           onClick={this.togglePersonHandler}>toggle persons</button>
+        <StyleButton
+           onClick={this.togglePersonHandler}>toggle persons</StyleButton>
         {persons}
       </div>
-      </StyleRoot>
+      // </StyleRoot>
     );
     // return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Ini juga berhasil jalan ') );
     }
   }
 
-export default Radium(App);
+export default App;
