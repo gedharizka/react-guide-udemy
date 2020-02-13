@@ -8,7 +8,7 @@ import styled from 'styled-components';
 // import classes from '*.module.css';
 
 const StyleButton = styled.button`
-background-color:green;
+background-color:${props => props.alt ? 'red' : 'green'};
 color:white;
 font:inherit;
 border:1px solid blue;
@@ -16,7 +16,7 @@ padding: 8px;
 cursor:pointer;
 
 &:hover{
-  background-color:lightgreen;
+  background-color:${props => props.alt ? 'salmon' : 'lightgreen'};
   color:black;
 }
 `;
@@ -92,11 +92,11 @@ class App extends Component {
             
           </div> 
       );
-      style.backgroundColor='red';
-      style[':hover']={
-        backgroundColor:'salmon',
-        color:'black'
-      };
+      // style.backgroundColor='red';
+      // style[':hover']={
+      //   backgroundColor:'salmon',
+      //   color:'black'
+      // };
     }
 
     const classes= [];
@@ -112,7 +112,8 @@ class App extends Component {
         <h1>Hi i'm now learn react APp Understanding component</h1>
         <p className={classes.join(' ')}>Ini bekerja</p>
         <StyleButton
-           onClick={this.togglePersonHandler}>toggle persons</StyleButton>
+           onClick={this.togglePersonHandler}
+           alt={this.state.showPersons}>toggle persons</StyleButton>
         {persons}
       </div>
       // </StyleRoot>
