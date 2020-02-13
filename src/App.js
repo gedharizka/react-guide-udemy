@@ -2,7 +2,7 @@
 import React,{Component} from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, {StyleRoot} from 'radium';
 // import classes from '*.module.css';
 
 class App extends Component {
@@ -92,6 +92,7 @@ class App extends Component {
       classes.push('bold');
     }
     return (
+      <StyleRoot>
       <div className="App">
         <h1>Hi i'm now learn react APp Understanding component</h1>
         <p className={classes.join(' ')}>Ini bekerja</p>
@@ -100,6 +101,7 @@ class App extends Component {
            onClick={this.togglePersonHandler}>toggle persons</button>
         {persons}
       </div>
+      </StyleRoot>
     );
     // return React.createElement('div', {className:'App'}, React.createElement('h1', null,'Ini juga berhasil jalan ') );
     }
