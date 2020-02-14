@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React,{Component} from 'react';
 import './App.css';
-import style from 'styled-components';
+// import style from 'styled-components';
 import Person from './Person/Person';
 import styled from 'styled-components';
 // import Radium, {StyleRoot} from 'radium';
@@ -63,18 +63,18 @@ class App extends Component {
   }
 
   render(){
-    const style= {
-      backgroundColor:'green',
-      color:'white',
-      font:'inherit',
-      border:'1px solid blue',
-      padding: '8px',
-      cursor:'pointer',
-      ':hover':{
-        backgroundColor:'lightgreen',
-        color:'black'
-      }
-    };
+    // const style= {
+    //   backgroundColor:'green',
+    //   color:'white',
+    //   font:'inherit',
+    //   border:'1px solid blue',
+    //   padding: '8px',
+    //   cursor:'pointer',
+    //   ':hover':{
+    //     backgroundColor:'lightgreen',
+    //     color:'black'
+    //   }
+    // };
 
     let persons = null;
 
